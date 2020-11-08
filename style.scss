@@ -1,0 +1,45 @@
+@mixin flex-center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    @include flex-center();
+    min-height: 100vh;
+    background-color: #ffffff;
+    flex-direction: column;
+}
+
+.container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 600px;
+    height: 600px;
+    gap: 1px;
+    background-color: black;
+    box-shadow: inset 0 0 0 2px #fff;
+
+    .block {
+        background-color: #ffffff;
+        // border: 1px solid rgb(168, 238, 39);
+        @include flex-center();
+        font-size: 10vmax;
+    }
+}
+
+.X {
+    color: red;
+}
+
+.O {
+    color: greenyellow;
+}
