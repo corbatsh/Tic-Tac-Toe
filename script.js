@@ -24,6 +24,8 @@ function restart() {
         ['e','e','e']
     ];
 
+    alert(`${winnerPlayerSpan.innerText !== '' ? `Wygrał: ${winnerPlayerSpan.innerText}` : 'Remis'}`);
+
     winnerPlayerSpan.innerText = '';
 }
 
